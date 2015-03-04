@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require_relative 'lexical_calculator.rb'
+  
+puts calc(ARGV[0])
+
