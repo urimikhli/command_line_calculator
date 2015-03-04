@@ -17,7 +17,7 @@ class LexicalCalculator
     if valid_operand?(operand1) && valid_operation?(operator) && valid_operand?(operand2)
       return [operand1, operator, operand2]
     else
-      raise "Please enter input in this format 'NUM OPER NUM' e.g. \"9 - 4 \". Note: The space between OPER and NUM on either side is IMPORTANT!"
+      raise "\nPlease enter input in this format:\n\t 'NUM OPER NUM' e.g. \"9 - 4\".\n Note: The space between OPER and NUM on either side is IMPORTANT!\n"
     end
 
   end
