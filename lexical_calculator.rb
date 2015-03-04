@@ -32,6 +32,7 @@ class LexicalCalculator
 
 end
 
+#make this tool available on the command line by calling it via the calc method.
 def calc(input)
   LexicalCalculator.calculate(input)
 end

@@ -2,5 +2,6 @@
 
 require_relative 'lexical_calculator.rb'
   
+#print calculation to screen for the shell command line
 puts calc(ARGV[0])
 
