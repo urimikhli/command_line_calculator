@@ -4,7 +4,7 @@ class LexicalCalculator
 
   def self.calculate(calc)
     operand1, operator, operand2 = parseMathInput calc
-    return operand1.to_f.send operator.to_sym, operand2.to_f
+    operand1.to_f.send operator.to_sym, operand2.to_f
   end
 
   private
@@ -15,7 +15,7 @@ class LexicalCalculator
     # return array 
     operand1, operator, operand2 = calc.split("\s")
     if valid_operand?(operand1) && valid_operation?(operator) && valid_operand?(operand2)
-      return [operand1, operator, operand2]
+      [operand1, operator, operand2]
     else
       raise "\nPlease enter input in this format:\n\t 'NUM OPER NUM' e.g. \"9 - 4\".\n Note: The space between OPER and NUM on either side is IMPORTANT!\n"
     end
@@ -23,11 +23,11 @@ class LexicalCalculator
   end
 
   def self.valid_operand?(operand)
-    return operand =~ /^\d+$/ # 1 or any number of digits only
+    operand =~ /^\d+$/ # 1 or any number of digits only
   end
 
   def self.valid_operation?(operator)
-    return operator =~ /^[\+\-\*\/]{1}$/ #one of + - * or /
+    operator =~ /^[\+\-\*\/]{1}$/ #one of + - * or /
   end
 
 end
