@@ -1,5 +1,4 @@
 class LexicalCalculator
-  attr_accessor :calc
 
   #this is simple enough that there is no need to instantiate it.
 
